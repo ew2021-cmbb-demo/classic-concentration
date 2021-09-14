@@ -1,0 +1,7 @@
+.cardFace {
+  border: 1px solid red;
+}
+
+.backFaceDown {
+  display: none;
+}
