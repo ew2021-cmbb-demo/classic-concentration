@@ -5,3 +5,7 @@
 .backFaceDown {
   display: none;
 }
+
+.hideKeyword {
+  display: none;
+}
