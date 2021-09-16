@@ -15,21 +15,24 @@ class Card extends React.Component {
     this.setState(prevState => ({
       unshown: !prevState.unshown
     }));
-  };
+  }
 
   render() {
     let currentFrontClass = "";
+    let keywordClass = styles.hideKeyword;
+
     if (this.state.unshown === false) {
       currentFrontClass = styles.backFaceDown;
+      keywordClass = "";
     }
 
     return (
       <div onClick={this.flipCard} className="card">
         <div className={currentFrontClass}>
-          <img src="" alt="cardback" />
+          <div className={styles.backGraphic}>Cardback</div>
         </div>
-        <div className={styles.cardFace + " bar"}>
-          <img src="" alt="keyword" />
+        <div className={keywordClass}>
+          <span>{this.props.keyword}</span>
         </div>
       </div>
     );
